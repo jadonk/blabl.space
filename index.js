@@ -1,9 +1,13 @@
 var express = require("express");
+var path = require('path');
+
 const port = 7777;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.sendFile('index.html',
+    { root: path.join(__dirname, 'files') }
+  );
 });
 
 app.use(express.static('files'))

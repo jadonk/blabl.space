@@ -1,8 +1,37 @@
 <html>
 	<head>
-		<script src="js/bootstrap.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css"> 
+		<style>
+			.lg {
+				font-size: 44px;
+			}
+		</style>
 	</head>
 	<body>
-		<p>Got here</p>
+		<div class="lg container mt-3">
+			<h2>Penske House Locks</h2>
+			<table class="lg table table-dark table-striped">
+				<thead>
+					<tr>
+						<th>Door</th>
+						<th>Code</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Master bedroom</td>
+						<td><input type="text" class="form-control" placeholder="Enter code" name="code-1"></input></td>
+						<td><button type="button" class="btn btn-danger">Locked</button></td>
+					</tr>
+					<tr>
+						<td>Game room</td>
+						<td><input type="text" class="form-control" placeholder="Enter code" name="code-1"></input></td>
+						<td><button type="button" class="btn btn-danger">Locked</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</body>
 </html>
