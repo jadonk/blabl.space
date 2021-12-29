@@ -1,0 +1,15 @@
+{
+  "name": "blabl.space",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Kridner <jkridner@beagleboard.org>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jadonk/blabl.space.git"
+  }
+}
