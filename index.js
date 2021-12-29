@@ -10,9 +10,13 @@ app.get("/", (req, res) => {
   );
 });
 
-app.use(express.static('files'))
-app.use(express.static('node_modules/bootstrap/dist'))
-app.use(express.static('node_modules/jquery/dist'))
+app.use(express.static('files'));
+app.use(express.static('node_modules/bootstrap/dist'));
+app.use(express.static('node_modules/jquery/dist'));
+
+app.post("/post", (req, res) => {
+  res.send("{ 'lock': 1 }");
+});
 
 // Starting the server on the 80 port
 app.listen(port, () => {

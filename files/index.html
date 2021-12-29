@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="jquery.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css"> 
 		<style>
 			.lg {
@@ -9,6 +10,19 @@
 		</style>
 	</head>
 	<body>
+		<script>
+			$("#code-1").keyup(function(e) {
+				$.post("/post",
+					{
+						"lock": "code-1",
+						"code": $('#code-1').val()
+					},
+					function(data, status) {
+						alert("unlock!");
+					}
+				);
+			});
+		</script>
 		<div class="lg container mt-3">
 			<h2>Penske House Locks</h2>
 			<table class="lg table table-dark table-striped">
@@ -22,12 +36,12 @@
 				<tbody>
 					<tr>
 						<td>Master bedroom</td>
-						<td><input type="text" class="form-control" placeholder="Enter code" name="code-1"></input></td>
+						<td><input type="text" class="form-control" placeholder="Enter code" id="code-1"></input></td>
 						<td><button type="button" class="btn btn-danger">Locked</button></td>
 					</tr>
 					<tr>
 						<td>Game room</td>
-						<td><input type="text" class="form-control" placeholder="Enter code" name="code-2"></input></td>
+						<td><input type="text" class="form-control" placeholder="Enter code" id="code-2"></input></td>
 						<td><button type="button" class="btn btn-danger">Locked</button></td>
 					</tr>
 				</tbody>
