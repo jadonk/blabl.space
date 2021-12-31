@@ -11,19 +11,22 @@
 	</head>
 	<body>
 		<script>
-			$("#code-1").keyup(function(e) {
-				$.post("/post",
-					{
-						"lock": "code-1",
-						"code": $('#code-1').val()
-					},
-					function(data, status) {
-						alert("unlock!");
-					}
-				);
+			$(document).ready(function() {
+				//window.debug_elem = $(".form-control");
+				//console.log(window.debug_elem);
+				$(".form-control").keyup(function(e) {
+					$.post("/post",
+						{
+							"lock": "code-1",
+							"code": $('#code-1').val()
+						},
+						function(data, status) {
+						}
+					);
+				});
 			});
 		</script>
-		<div class="lg container mt-3">
+		<div class="lg container mt-3"><form>
 			<h2>Penske House Locks</h2>
 			<table class="lg table table-dark table-striped">
 				<thead>
@@ -46,6 +49,6 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
+		</form></div>
 	</body>
 </html>
