@@ -14,8 +14,11 @@ app.use(express.static('files'));
 app.use(express.static('node_modules/bootstrap/dist'));
 app.use(express.static('node_modules/jquery/dist'));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.post("/post", (req, res) => {
-  res.send("{ 'lock': 1 }");
+  console.log("post: %j",  req.body);
+  res.json(req.body);
 });
 
 // Starting the server on the 80 port
