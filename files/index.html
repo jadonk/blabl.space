@@ -17,8 +17,8 @@
 				$(".form-control").keyup(function(e) {
 					$.post("/post",
 						{
-							"lock": "code-1",
-							"code": $('#code-1').val()
+							"lock": this.id,
+							"code": $(this).val()
 						},
 						function(data, status) {
 						}
